@@ -1,4 +1,10 @@
 extends layout.pug
 block content
     section#content
-        h2= prompt
+        h2= text
+        if side == 'question'
+            p hint: #{hint}
+        p
+            a(href=`${hintbase}${hintText}`) #{hintText}
+            br
+            a(href='/cards') Next card
